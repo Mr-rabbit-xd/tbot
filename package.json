@@ -1,0 +1,30 @@
+{
+  "name": "mr-rabbit-bot",
+  "version": "1.0.0",
+  "description": "MR RABBIT XMD Telegram Bot with Download, Fun, AI, Tools, and Support commands.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.61.0",
+    "fs-extra": "^11.1.1",
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "mr-rabbit",
+    "xmd",
+    "fun",
+    "ai",
+    "download",
+    "tools"
+  ],
+  "author": "Rabbit",
+  "license": "MIT"
+}
