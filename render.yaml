@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: mr-rabbit-api
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node web.js"
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_TELEGRAM_ID
+        sync: false
+      - key: UPI_ID
+        sync: false
+      - key: QR_IMAGE_URL
+        sync: false
+      - key: FIREBASE_SA_BASE64
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+
+  - type: worker
+    name: mr-rabbit-bot
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node worker.js"
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_TELEGRAM_ID
+        sync: false
+      - key: UPI_ID
+        sync: false
+      - key: QR_IMAGE_URL
+        sync: false
+      - key: FIREBASE_SA_BASE64
+        sync: false
+      - key: MONGODB_URI
+        sync: false
